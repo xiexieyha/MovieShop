@@ -1,0 +1,33 @@
+﻿@using ApplicationCore.Models
+@model PagedResultSet<MovieCardResponseModel>
+
+@*
+    For morebottomation on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h2>Movies</h2>
+<table>
+    @{
+        <div class="row">
+        @foreach (var m in Model.Data)
+        {
+
+            <div class="card col-3" style="margin-right:2px; margin-bottom:5px;" >
+            
+                <img src="@m.PosterUrl" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@m.Title</h5>
+
+                </div>
+            </div>
+
+
+        }
+        </div>
+
+    }
+
+
+
+</table>
